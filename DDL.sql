@@ -25,7 +25,8 @@ create table student_answers
     student_answers_id serial primary key,
     questions_id       int references questions (questions_id),
     answer_options_id  int references answer_options (answer_options_id),
-    student_id         int references students (student_id)
+    student_id         int references students (student_id),
+    test_result_id     int references test_results (result_id)
 );
 create table students
 (
